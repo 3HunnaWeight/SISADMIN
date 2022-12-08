@@ -1,0 +1,22 @@
+.header{
+    margin-top: 50px;
+    }
+    .nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .navLink{
+    text-decoration: none;
+    margin-right: 7%;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    transition: transform 0.3s;
+    }
+    .navLink:nth-child(4){
+        margin-right: 0%;
+    }
+.navLink:hover{
+transform: scale(1.3);
+}
