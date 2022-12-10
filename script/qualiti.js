@@ -8,6 +8,7 @@ const seventh = document.getElementById('seventh')
 const eighth = document.getElementById('eighth')
 const info = document.querySelector(".info")
 let infoContent = document.querySelector(".infoContent")
+const hide = document.querySelector(".hide")
 const textContent = {
     textFirst:"Самое частое требование к кандидату на должность сисадмина. Оно и не удивительно. Ведь человек на самом деле должен серьёзно относиться к доверенной ему структуре и понимать все риски и сложности.",
     textSecond:"Дисциплины от своих работников ждёт любой работодатель, но тут она прям очень важна. Дисциплина для системного администратора — это и пунктуальность, и умение организовать своё время, и много чего ещё. Что уже говорить про экстренные ситуации, когда компании теряют огромные деньги из-за простоев?",
@@ -18,7 +19,10 @@ const textContent = {
     textSeventh:"Дедлайны — наше всё. Если сисадмин не делает свою работу в сроки и в нужном количестве, то пиши пропало. Системному администратору нельзя говорить одно, а делать другое — ну не работается так эта работа.",
     textEighth:"“Беда не приходит одна” — именно так можно описать работу системного администратора. Чем больше система, тем больше с ней проблем, поэтому вы обязаны уметь решать несколько проблем сразу и расставлять приоритеты в их решении.",
 }
-
+setTimeout(() => {
+    hide.style.width="0px"
+    hide.style.height="0px"
+}, 2000);
 function textIn (block,content){
     block.addEventListener('mouseover',()=>{
              block.innerHTML=`${content}` 
@@ -42,6 +46,7 @@ function allFn(block,content,nameOfBlock){
     textIn(block,content)
     textOut(block,nameOfBlock)
 }
+
 allFn(first,textContent.textFirst,'Ответственность')
 allFn(second,textContent.textSecond,'Дисциплина')
 allFn(third,textContent.textThird,'Саморазвитие')
@@ -50,4 +55,3 @@ allFn(fiveth,textContent.textFiveth,'Увлеченность')
 allFn(sixth,textContent.textSixth,'Внимательность')
 allFn(seventh,textContent.textSeventh,'Исполнительность')
 allFn(eighth,textContent.textEighth,'Многозадачность')
-
